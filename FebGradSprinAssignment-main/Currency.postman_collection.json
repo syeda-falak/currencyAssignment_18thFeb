@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "11c532db-3548-4ba9-bc1f-4693bf722ae4",
+		"name": "Currency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25861827"
+	},
+	"item": [
+		{
+			"name": "Get Test from APi",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "0EO3UheNFmCdv5faA0bmBoFM35o7JKkP",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.apilayer.com/fixer/convert?to=USD&from=AED&amount=5000&date=2022-01-01",
+					"protocol": "https",
+					"host": [
+						"api",
+						"apilayer",
+						"com"
+					],
+					"path": [
+						"fixer",
+						"convert"
+					],
+					"query": [
+						{
+							"key": "to",
+							"value": "USD"
+						},
+						{
+							"key": "from",
+							"value": "AED"
+						},
+						{
+							"key": "amount",
+							"value": "5000"
+						},
+						{
+							"key": "date",
+							"value": "2022-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Conversion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8102/currency/currencyConversion?amount=1000&date=2022-02-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8102",
+					"path": [
+						"currency",
+						"currencyConversion"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "1000"
+						},
+						{
+							"key": "date",
+							"value": "2022-02-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exchange Rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8102/currency/exchangeRate?date=2022-05-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8102",
+					"path": [
+						"currency",
+						"exchangeRate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-05-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
